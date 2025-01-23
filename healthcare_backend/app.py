@@ -2,9 +2,9 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route('/api/symptoms', methods=['GET'])
-def get_symptoms():
-    return jsonify({"message": "API is working!"})
+@app.route('/')
+def home():
+    return "Welcome to the Healthcare Assistant!"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)

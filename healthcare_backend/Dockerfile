@@ -2,17 +2,22 @@
 FROM python:3.9-slim
 
 # Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the current directory into the container's working directory
-COPY . .
+# Copy requirements.txt into the container
+COPY requirements.txt /app/
 
-# Install dependencies (Flask, etc.)
-RUN pip install --no-cache-dir -r requirements.txt
+# Install the dependencies
+RUN ls -al /app/
+RUN pip install --no-cache-dir -r /app/requirements.txt --verbose
+
 
 # Expose the port your app will run on
 EXPOSE 5000
 
 # Command to run the Flask app
 CMD ["python", "app.py"]
+
+
 
