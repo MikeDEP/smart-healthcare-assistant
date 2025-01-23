@@ -6,10 +6,10 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy requirements.txt into the container
-COPY requirements.txt /app/
+#COPY requirements.txt /app/
 
 # Install the dependencies
-RUN ls -al /app/
+#RUN ls -al /app/
 RUN pip install --no-cache-dir -r /app/requirements.txt --verbose
 
 
