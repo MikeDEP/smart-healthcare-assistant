@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+from django.http import HttpResponse
 
-def get_symptoms(request):
-    return JsonResponse({"message": "API is working!"})
+def home(request):
+    return HttpResponse("Welcome to the Home Page!")

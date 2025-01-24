@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-le+308bz#=(z*=@)(3p7jzwh5b+v2izjyw$+@t_4d-st5axvmo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'healthcare-backend-env.eba-m7iyxkfw.us-east-1.elasticbeanstalk.com',  # Add your Elastic Beanstalk URL here
+    
+]
 
 
 # Application definition
